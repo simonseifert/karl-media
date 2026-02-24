@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Play } from 'lucide-react';
 import type { Project } from '@/types';
 import { cn } from '@/lib/utils';
 
@@ -59,6 +60,13 @@ export function ProjectCard({
             onLoad={() => setIsLoaded(true)}
           />
           
+          {/* Video/Reel indicator */}
+          {project.reelUrl && (
+            <div className="absolute top-4 right-4 p-2 bg-black/50 rounded-full backdrop-blur-sm">
+              <Play className="size-4 text-white" fill="white" />
+            </div>
+          )}
+
           {/* Overlay with gradient and text */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             <div className="absolute bottom-0 left-0 right-0 p-6 space-y-2">
@@ -67,7 +75,7 @@ export function ProjectCard({
               </h3>
               {showCategory && (
                 <div className="flex items-center gap-3 text-sm text-white/80 font-light tracking-wide">
-                  <span className="capitalize">{project.category}</span>
+                  <span className="capitalize">{project.category.replace('-', ' ')}</span>
                   <span>•</span>
                   <span>{project.year}</span>
                 </div>
