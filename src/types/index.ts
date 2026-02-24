@@ -1,9 +1,8 @@
 /**
- * Core TypeScript interfaces for Frame Portfolio
- * Based on SPECIFICATION.md data model requirements
+ * Core TypeScript interfaces for Karl Media Agency
  */
 
-export type ProjectCategory = 'portraits' | 'landscapes' | 'editorial' | 'architecture' | 'documentary';
+export type ProjectCategory = 'social-media' | 'videography' | 'photography' | 'web';
 
 export type AspectRatio = 'portrait' | 'landscape' | 'square';
 
@@ -24,36 +23,57 @@ export interface Project {
   images: ProjectImage[];
   description: string;
   client?: string;
-  camera?: string;
+  reelUrl?: string;
+  platform?: string;
   location?: string;
   slug: string;
 }
 
-export interface PhotographerInfo {
+export interface TeamMember {
+  id: string;
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  socialLinks: {
+    instagram?: string;
+    linkedin?: string;
+    email?: string;
+    phone?: string;
+  };
+}
+
+export interface Service {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+}
+
+export interface AgencyInfo {
   name: string;
   tagline: string;
   heroIntroduction: string;
-  biography: string;
-  approach: string;
-  awards: string[];
-  clients: string[];
-  education: string;
-  location: string;
+  description: string;
+  mission: string;
+  team: TeamMember[];
+  services: Service[];
   email: string;
   phone: string;
+  location: string;
   availability: string;
   socialLinks: {
     instagram?: string;
     linkedin?: string;
-    behance?: string;
+    tiktok?: string;
   };
-  portraitImage: string;
+  logoImage?: string;
 }
 
 export interface ContactSubmission {
   name: string;
   email: string;
-  projectType: 'editorial' | 'commercial' | 'personal';
+  projectType: 'social-media' | 'videography' | 'photography' | 'web';
   message: string;
   timestamp: Date;
 }
