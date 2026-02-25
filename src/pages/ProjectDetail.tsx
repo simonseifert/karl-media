@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, User, Globe, Play, ArrowLeft } from 'lucide-react';
@@ -13,6 +13,7 @@ export default function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
   const project = slug ? getProjectBySlug(slug) : undefined;
 
+  const reelRef = useRef<HTMLVideoElement | null>(null);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -120,47 +121,65 @@ export default function ProjectDetail() {
               )}
             </div>
 
-            {/* Reel Link */}
+            {/* Reel Inline */}
             {project.reelUrl && (
-              <div className="pt-4">
-                <a
-                  href={project.reelUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-6 py-3 bg-primary text-primary-foreground rounded-sm font-light tracking-wide hover:opacity-90 transition-opacity"
-                >
-                  <Play className="size-5" />
-                  Watch on Instagram
-                </a>
+              <div className="pt-4 space-y-3">
+                <div className="inline-flex items-center gap-2 text-sm uppercase tracking-wide text-muted-foreground">
+                  <Play className="size-4" />
+                  <span>Reel</span>
+                </div>
+                <video
+                  ref={reelRef}
+                  src={project.reelUrl}
+                  controls
+                  playsInline
+                  muted
+                  poster={project.coverImage}
+                  className="w-full rounded-sm border border-border"
+                  preload="metadata"
+                  onMouseEnter={() => {
+                    reelRef.current?.play();
+                  }}
+                  onMouseLeave={() => {
+                    if (reelRef.current) {
+                      reelRef.current.pause();
+                      reelRef.current.currentTime = 0;
+                    }
+                  }}
+                />
               </div>
             )}
           </motion.div>
         </section>
 
         {/* Image Gallery */}
-        <section className="py-12 md:py-16">
-          <div className="space-y-8 md:space-y-12">
-            {project.images.map((image, index) => (
-              <ScrollReveal key={image.id} delay={index * 0.1}>
-                <ImageWithLightbox
-                  image={image}
-                  onClick={() => openLightbox(index)}
-                  priority={index === 0}
-                  index={0}
-                  className="w-full"
-                />
-              </ScrollReveal>
-            ))}
-          </div>
-        </section>
+        {project.images.length > 0 && (
+          <>
+            <section className="py-12 md:py-16">
+              <div className="space-y-8 md:space-y-12">
+                {project.images.map((image, index) => (
+                  <ScrollReveal key={image.id} delay={index * 0.1}>
+                    <ImageWithLightbox
+                      image={image}
+                      onClick={() => openLightbox(index)}
+                      priority={index === 0}
+                      index={0}
+                      className="w-full"
+                    />
+                  </ScrollReveal>
+                ))}
+              </div>
+            </section>
 
-        <Lightbox
-          images={project.images}
-          currentIndex={currentImageIndex}
-          isOpen={lightboxOpen}
-          onClose={() => setLightboxOpen(false)}
-          onNavigate={setCurrentImageIndex}
-        />
+            <Lightbox
+              images={project.images}
+              currentIndex={currentImageIndex}
+              isOpen={lightboxOpen}
+              onClose={() => setLightboxOpen(false)}
+              onNavigate={setCurrentImageIndex}
+            />
+          </>
+        )}
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, ArrowRight } from 'lucide-react';
+import { Instagram, ArrowRight } from 'lucide-react';
 import { agencyInfo } from '@/data/agency';
 import { Link } from 'react-router-dom';
 
@@ -39,17 +39,6 @@ export function Footer() {
                 aria-label="Instagram"
               >
                 <Instagram className="size-5" />
-              </a>
-            )}
-            {agencyInfo.socialLinks.linkedin && (
-              <a
-                href={agencyInfo.socialLinks.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="size-5" />
               </a>
             )}
           </div>

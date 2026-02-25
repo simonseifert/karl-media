@@ -6,34 +6,34 @@ All colors MUST be HSL.
 */
 
 :root {
-  --background: hsl(0 0% 100%);
-  --foreground: hsl(240 10% 3.9%);
-  --card: hsl(0 0% 100%);
-  --card-foreground: hsl(240 10% 3.9%);
-  --popover: hsl(0 0% 100%);
-  --popover-foreground: hsl(240 10% 3.9%);
-  --primary: hsl(240 5.9% 10%);
-  --primary-foreground: hsl(0 0% 98%);
-  --secondary: hsl(240 4.8% 95.9%);
-  --secondary-foreground: hsl(240 5.9% 10%);
-  --muted: hsl(240 4.8% 95.9%);
-  --muted-foreground: hsl(240 3.8% 46.1%);
-  --accent: hsl(240 4.8% 95.9%);
-  --accent-foreground: hsl(240 5.9% 10%);
-  --destructive: hsl(0 84.2% 60.2%);
-  --destructive-foreground: hsl(0 0% 98%);
-  --border: hsl(240 5.9% 90%);
-  --input: hsl(240 5.9% 90%);
-  --ring: hsl(240 5.9% 10%);
+  --background: hsl(220 15% 6%);
+  --foreground: hsl(48 9% 92%);
+  --card: hsl(220 15% 8%);
+  --card-foreground: hsl(48 9% 92%);
+  --popover: hsl(220 15% 8%);
+  --popover-foreground: hsl(48 9% 92%);
+  --primary: hsl(44 65% 52%);
+  --primary-foreground: hsl(0 0% 6%);
+  --secondary: hsl(220 12% 14%);
+  --secondary-foreground: hsl(48 9% 92%);
+  --muted: hsl(220 12% 12%);
+  --muted-foreground: hsl(220 10% 60%);
+  --accent: hsl(220 12% 16%);
+  --accent-foreground: hsl(48 9% 92%);
+  --destructive: hsl(0 68% 48%);
+  --destructive-foreground: hsl(0 0% 96%);
+  --border: hsl(220 12% 18%);
+  --input: hsl(220 12% 18%);
+  --ring: hsl(44 65% 52%);
   --radius: 0.5rem;
-  --sidebar-background: hsl(0 0% 98%);
-  --sidebar-foreground: hsl(240 5.3% 26.1%);
-  --sidebar-primary: hsl(240 5.9% 10%);
-  --sidebar-primary-foreground: hsl(0 0% 98%);
-  --sidebar-accent: hsl(240 4.8% 95.9%);
-  --sidebar-accent-foreground: hsl(240 5.9% 10%);
-  --sidebar-border: hsl(220 13% 91%);
-  --sidebar-ring: hsl(217.2 91.2% 59.8%);
+  --sidebar-background: hsl(220 15% 8%);
+  --sidebar-foreground: hsl(48 9% 92%);
+  --sidebar-primary: hsl(44 65% 52%);
+  --sidebar-primary-foreground: hsl(0 0% 6%);
+  --sidebar-accent: hsl(220 12% 14%);
+  --sidebar-accent-foreground: hsl(48 9% 92%);
+  --sidebar-border: hsl(220 12% 18%);
+  --sidebar-ring: hsl(44 65% 52%);
 
   /* Shugar Design System Variables */
   --context-card-border: hsla(0, 0%, 92%, 1);
@@ -57,33 +57,33 @@ All colors MUST be HSL.
 }
 
 .dark {
-  --background: hsl(240 10% 3.9%);
-  --foreground: hsl(0 0% 98%);
-  --card: hsl(240 10% 3.9%);
-  --card-foreground: hsl(0 0% 98%);
-  --popover: hsl(240 10% 3.9%);
-  --popover-foreground: hsl(0 0% 98%);
-  --primary: hsl(0 0% 98%);
-  --primary-foreground: hsl(240 5.9% 10%);
-  --secondary: hsl(240 3.7% 15.9%);
-  --secondary-foreground: hsl(0 0% 98%);
-  --muted: hsl(240 3.7% 15.9%);
-  --muted-foreground: hsl(240 5% 64.9%);
-  --accent: hsl(240 3.7% 15.9%);
-  --accent-foreground: hsl(0 0% 98%);
+  --background: hsl(220 15% 6%);
+  --foreground: hsl(48 9% 92%);
+  --card: hsl(220 15% 8%);
+  --card-foreground: hsl(48 9% 92%);
+  --popover: hsl(220 15% 8%);
+  --popover-foreground: hsl(48 9% 92%);
+  --primary: hsl(44 65% 52%);
+  --primary-foreground: hsl(0 0% 6%);
+  --secondary: hsl(220 12% 14%);
+  --secondary-foreground: hsl(48 9% 92%);
+  --muted: hsl(220 12% 12%);
+  --muted-foreground: hsl(220 10% 60%);
+  --accent: hsl(220 12% 16%);
+  --accent-foreground: hsl(48 9% 92%);
   --destructive: hsl(0 62.8% 30.6%);
   --destructive-foreground: hsl(0 0% 98%);
-  --border: hsl(240 3.7% 15.9%);
-  --input: hsl(240 3.7% 15.9%);
-  --ring: hsl(240 4.9% 83.9%);
-  --sidebar-background: hsl(240 5.9% 10%);
-  --sidebar-foreground: hsl(240 4.8% 95.9%);
-  --sidebar-primary: hsl(224.3 76.3% 48%);
-  --sidebar-primary-foreground: hsl(0 0% 100%);
-  --sidebar-accent: hsl(240 3.7% 15.9%);
-  --sidebar-accent-foreground: hsl(240 4.8% 95.9%);
-  --sidebar-border: hsl(240 3.7% 15.9%);
-  --sidebar-ring: hsl(217.2 91.2% 59.8%);
+  --border: hsl(220 12% 18%);
+  --input: hsl(220 12% 18%);
+  --ring: hsl(44 65% 52%);
+  --sidebar-background: hsl(220 15% 8%);
+  --sidebar-foreground: hsl(48 9% 92%);
+  --sidebar-primary: hsl(44 65% 52%);
+  --sidebar-primary-foreground: hsl(0 0% 6%);
+  --sidebar-accent: hsl(220 12% 14%);
+  --sidebar-accent-foreground: hsl(48 9% 92%);
+  --sidebar-border: hsl(220 12% 18%);
+  --sidebar-ring: hsl(44 65% 52%);
 
   /* Shugar Design System Variables - Dark Mode */
   --context-card-border: hsla(0, 0%, 18%, 1);
@@ -182,6 +182,11 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(212, 175, 55, 0.08), transparent 32%),
+      radial-gradient(circle at 85% 0%, rgba(212, 175, 55, 0.05), transparent 30%),
+      linear-gradient(180deg, #0b0c10 0%, #050507 100%);
+    background-attachment: fixed;
   }
 }
 

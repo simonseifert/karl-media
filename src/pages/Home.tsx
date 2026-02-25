@@ -25,13 +25,13 @@ export default function Home() {
               loop
               playsInline
               preload="metadata"
-              poster="https://images.pexels.com/videos/2675516/free-video-2675516.jpg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200"
+              poster="/media/1d8zwuQNIrjUowAQp4QIxKA7FVvb1Rw3qPpeErVJxnBQBEVQEU8SqGt95sCSXI9b.webp"
               className="w-full h-full object-cover"
               onError={(e) => {
                 e.currentTarget.style.opacity = '0';
               }}
             >
-              <source src="https://videos.pexels.com/video-files/2675516/2675516-sd_960_540_24fps.mp4" type="video/mp4" />
+              <source src="/media/showreel.mp4" type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70" />
           </div>
