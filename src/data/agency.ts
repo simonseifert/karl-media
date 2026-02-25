@@ -12,7 +12,7 @@ export const agencyInfo: AgencyInfo = {
       name: 'Nirmal Karl Hadzic',
       role: 'Founder',
       bio: 'Nirmal is the visionary behind Karl Media. With a passion for storytelling and visual media, he founded the agency to help businesses elevate their brand through high-quality video content and digital presence.',
-      image: '/media/Image-png.avif',
+      image: '/media/34kJtlWMTgbIaJkJenpTVZ47wXQh8eNQmWoWEaz3BXSvrg3XC2dfb6Z2zXjLRnVM.webp',
       socialLinks: {
         instagram: 'https://www.instagram.com/nirmal.karl/',
         linkedin: 'https://www.linkedin.com/in/nirmal-karl-hadzic/',
@@ -56,7 +56,7 @@ export const agencyInfo: AgencyInfo = {
   ],
   email: 'info@mediakarl.com',
   phone: '+385992031880',
-  location: 'Germany',
+  location: 'Croatia',
   availability: 'Currently accepting new projects',
   socialLinks: {
     instagram: 'https://www.instagram.com/media.karl/',
